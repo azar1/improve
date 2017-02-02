@@ -1,0 +1,527 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>pu slides</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html, body,*{
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	max-height: 100vh;
+	overflow: hidden;
+}
+a{
+	text-decoration: none;
+	
+}
+#popUpNextLink{
+	width: 100%;
+	height: 100vh;
+	background-color: #000100;
+	
+}
+.puNLBox{position: relative;float: left;}
+#puNextLink-01{
+	width: 8%;
+	height: 100%;
+	background-color: #fffcde;	
+}
+#puNLClose{ text-align: center; }
+#puNLClose a{color: #e1370a;font-size: 3em;}
+#puNLLogo{position: absolute; top: 40%;margin-left: 10%;width: 80%; height: 12%;background-image: url("image/MTeam_Logo.png"); background-size: 100% 100%;}
+#puNLSocialIcons{position: absolute;  top: 95%;}
+#puNLSocialIcons div{float: left;}
+#puNLSocialIcons .fa{ color: #e1370a; font-size: 2.3em; margin-left: 5px;}
+#puNLSlide-01{background-color: #FEBCBA;}
+#puNLSlide-02{background-color: #FBF0A4;}
+#puNLSlide-03{background-color: #CBF8C9;}
+#puNLSlide-04{background-color: #C5F0FA;}
+/*#puNextLink-02{
+	width: 92%;
+	height: 100%;
+	background-color: #fffcde;
+}*/
+/*
+.puNLSlides{
+	position: relative;
+	width: 20%;
+	height: 100%;
+	float:left;
+}
+#puNLSlide-01{background-color: #FEBCBA;}
+#puNLSlide-02{background-color: #FBF0A4;}
+#puNLSlide-03{background-color: #CBF8C9;}
+#puNLSlide-04{background-color: #C5F0FA;}
+
+.animOver{transition:all 500ms linear; background-color: #000;opacity: 0.8; animation:animOver 2s ease;}
+@keyframes animOver{
+	from{transition: ease-in; transform: translateX(-100%); opacity: 0}	
+	to{transform: translateX(0%); opacity: 0.8;}
+}
+/*
+.active{
+	width: 40%;
+	height: 100%;
+}
+.puNLSlides h1{ position: absolute;left: -10%; top: 60%;border: 1px solid black;width: 100%; padding: 50px;font-size: 3em; transform: rotate(-90deg)}
+.puNLSlides p{  position: relative; display: none; width: 80%;}
+.puNLSlides span{ position: relative; transform: rotate(-90deg); display: block; top: 65%; left:20%; font-size: 2em; }
+#popUpNextLink{transform: translateX(0%); animation: slideLeft 3s}
+@keyframes slideLeft{
+	0%{transform: translateX(100%);}
+	100%{transform: translateX(0%);}
+}
+.puNLSlides:nth-child(1){
+	animation: slideDown1 5s;
+
+}
+@keyframes slideDown1{
+	0%{transform: translateX(250%);}
+	50%{transform: translateX(250%);}
+	85%{transform: translateX(0%);}
+	100%{transform: translateX(0%);}
+}
+.puNLSlides:nth-child(2){
+	animation: slideDown2 8s;
+}
+@keyframes slideDown2{
+	0%{transform: translateX(400%);}
+	50%{transform: translateX(400%);}
+	75%{transform: translateX(0%);}
+	100%{transform: translateX(0%);}
+}
+.puNLSlides:nth-child(3){
+	animation: slideDown3 11s;
+}
+@keyframes slideDown3{
+	0%{transform: translateX(300%);}
+	50%{transform: translateX(300%);}
+	65%{transform: translateX(0%);}
+	70%{transform: translateX(0%);}
+	80%{transform: translateX(0%);}
+	100%{transform: translateX(0%);}
+}
+.puNLSlides:nth-child(4){
+	animation: slideDown4 14s;
+}
+@keyframes slideDown4{
+	0%{transform: translateX(200%);}
+	50%{transform: translateX(200%);}
+	60%{transform: translateX(0%);}
+	70%{transform: translateX(0%);}
+	80%{transform: translateX(0%);}
+	100%{transform: translateX(0%);}
+}
+.puNLSlides:nth-child(5){
+	animation: slideDown5 16s;
+}
+@keyframes slideDown5{
+	0%{transform: translateX(100%);}
+	50%{transform: translateX(100%);}
+	60%{transform: translateX(0%);}
+	70%{transform: translateX(0%);}
+	80%{transform: translateX(0%);}
+	100%{transform: translateX(0%);}
+}*/
+/*@media only screen and (max-width: 450px){
+	#puNextLink-01{
+		width: 13%;
+	}
+	#puNextLink-02{
+		width: 87%;
+	}
+	.puNLSlides{
+		width: 100%;
+		height: 7.5%;
+	}
+	.active{
+		width: 100%;
+		height: 70%;
+	}
+	#puNLClose a{font-size: 1.5em;}
+	#puNLSocialIcons{top: 87%;}
+	#puNLSocialIcons .fa{font-size: 1.4em; margin-left: 2px;}
+	#puNLLogo{height: 8%;}
+	.puNLSlides h1{font-size: 1em;}
+	.puNLSlides p{ font-size: .83em;margin-top: 5%;}
+}
+@media only screen and (max-width: 350px){
+	#puNLSocialIcons .fa{font-size: 1.1em; margin-left: 2px;}
+}
+@media only screen and (min-width: 451px) and (max-width: 600px){
+	#puNextLink-01{
+		width: 10%;
+	}
+	#puNextLink-02{
+		width: 90%;
+	}
+	.puNLSlides{
+		width: 100%;
+		height: 12.5%;
+	}
+	.active{
+		width: 100%;
+		height: 50%;
+	}
+	#puNLClose a{font-size: 1.7em;}
+	#puNLSocialIcons{top: 86%;}
+	#puNLSocialIcons .fa{font-size: 1.5em; margin-left: 4px;}
+	#puNLLogo{height: 9%;}
+	.puNLSlides h1{font-size: 1em;}
+	.puNLSlides p{ font-size: .85em;margin-top: 5%;}
+}
+@media only screen and (min-width: 451px) and (max-width: 500px){
+	#puNLSocialIcons .fa{font-size: 1.4em; margin-left: 3px;}
+}
+@media only screen and (min-width: 601px) and (max-width: 800px){
+	#puNextLink-01{
+		width: 12%;
+	}
+	#puNextLink-02{
+		width: 88%;
+	}
+	.puNLSlides{
+		width: 100%;
+		height: 15%;
+	}
+	.active{
+		width: 100%;
+		height: 40%;
+	}
+	#puNLClose a{font-size: 2.2em;}
+	#puNLSocialIcons{top: 86%;}
+	#puNLSocialIcons .fa{font-size: 1.8em; margin-left: 4px;}
+	#puNLLogo{height: 13%;}
+	.puNLSlides h1{font-size: 1em;}
+	.puNLSlides p{ font-size: .85em;margin-top: 5%;}
+}
+@media only screen and (min-width: 651px) and (max-width: 800px){
+	#puNLSocialIcons .fa{font-size: 2em; margin-left: 5px;}
+}
+@media only screen and (min-width: 801px) and (max-width: 1200px){
+	#puNextLink-01{
+		width: 8%;
+	}
+	#puNextLink-02{
+		width: 92%;
+	}
+	.puNLSlides{
+		width: 15%;
+		height: 100%;
+	}
+	.active{
+		width: 40%;
+		height: 100%;
+	}
+	#puNLClose a{font-size: 2.4em;}
+	#puNLSocialIcons{top: 87%;}
+	#puNLSocialIcons .fa{font-size: 1.8em; margin-left: 5px;}
+	#puNLLogo{height: 10%;}
+	.puNLSlides h1{font-size: 1em;}
+	.puNLSlides p{ font-size: .85em;margin-top: 5%;}
+}
+@media only screen and (min-width: 801px) and (max-width: 1200px){
+	#puNextLink-01{
+		width: 8%;
+	}
+	#puNextLink-02{
+		width: 92%;
+	}
+	.puNLSlides{
+		width: 15%;
+		height: 100%;
+	}
+	.active{
+		width: 40%;
+		height: 100%;
+	}
+	#puNLClose a{font-size: 2.6em;}
+	#puNLSocialIcons{top: 95%;}
+	#puNLSocialIcons .fa{font-size: 1em; margin-left: 2px;}
+	#puNLLogo{height: 13%;}
+	.puNLSlides h1{font-size: 1.1em;}
+	.puNLSlides p{ font-size: 0.9em;margin-top: 5%;}
+}
+@media only screen and (min-width: 1001px) and (max-width: 1200px){
+	#puNLSocialIcons .fa{font-size: 1.3em; margin-left: 2px;}
+}
+@media only screen and (min-width: 1201px) and (max-width: 1500px){
+	#puNextLink-01{
+		width: 8%;
+	}
+	#puNextLink-02{
+		width: 92%;
+	}
+	.puNLSlides{
+		width: 15%;
+		height: 100%;
+	}
+	.active{
+		width: 40%;
+		height: 100%;
+	}
+	#puNLClose a{font-size: 2.7em;}
+	#puNLSocialIcons{top: 93%;}
+	#puNLSocialIcons .fa{font-size: 1.5em; margin-left:2px;}
+	#puNLLogo{height: 13%;}
+	.puNLSlides h1{font-size: 1.1em;}
+	.puNLSlides p{ font-size: 0.9em;margin-top: 5%;}
+}
+@media only screen and (min-width: 1301px) and (max-width: 1500px){
+	#puNLSocialIcons .fa{font-size: 1.75em; margin-left:2px;}
+}
+@media only screen and (min-width: 1501px) and (max-width: 1800px){
+	#puNextLink-01{
+		width: 8%;
+	}
+	#puNextLink-02{
+		width: 92%;
+	}
+	.puNLSlides{
+		width: 15%;
+		height: 100%;
+	}
+	.active{
+		width: 40%;
+		height: 100%;
+	}
+	#puNLClose a{font-size: 3em;}
+	#puNLSocialIcons{top: 93%;}
+	#puNLSocialIcons .fa{font-size: 2em; margin-left:2px;}
+	#puNLLogo{height: 13%;}
+	.puNLSlides h1{font-size: 1.2em;}
+	.puNLSlides p{ font-size: 0.95em;margin-top: 5%;}
+}
+@media only screen and (min-width: 1601px) and (max-width: 1800px){
+	#puNLSocialIcons .fa{font-size: 2.15em; margin-left:2px;}
+}
+@media only screen and (min-width: 1801px) and (max-width: 2000px){
+	#puNextLink-01{
+		width: 8%;
+	}
+	#puNextLink-02{
+		width: 92%;
+	}
+	.puNLSlides{
+		width: 15%;
+		height: 100%;
+	}
+	.active{
+		width: 40%;
+		height: 100%;
+	}
+	#puNLClose a{font-size: 3em;}
+	#puNLSocialIcons{top: 93%;}
+	#puNLSocialIcons .fa{font-size: 2.3em; margin-left:4px;}
+	#puNLLogo{height: 13%;}
+	.puNLSlides h1{font-size: 1.5em;}
+	.puNLSlides p{ font-size: 1em;margin-top: 5%;}
+}*/
+.puNLSlides:nth-child(4) .puNLSlides-overlay {
+  background-color: #5aaed6;
+  opacity: 1;
+}
+.puNLSlides:nth-child(4).out .puNLSlides-overlay {
+  background-color: #5aaed6;
+  opacity: 0;
+}
+.puNLSlides:nth-child(3) .puNLSlides-overlay {
+  background-color: #ff8787;
+  opacity: 1;
+}
+.puNLSlides:nth-child(3).out .puNLSlides-overlay{
+  background-color: #ff8787;
+  opacity: 0;
+}
+.puNLSlides:nth-child(2) .puNLSlides-overlay{
+  background-color: #ff6d6d;
+  opacity: 1;
+}
+.puNLSlides:nth-child(2).out .puNLSlides-overlay {
+  background-color: #ff6d6d;
+  opacity: 0;
+}
+.puNLSlides:nth-child(1) .puNLSlides-overlay {
+  background-color: #ff3a3a;
+  opacity: 1;
+}
+.puNLSlides:nth-child(1).out .puNLSlides-overlay {
+  background-color: #ff3a3a;
+  opacity: 0;
+}
+
+
+#puNextLink-02{
+  overflow: hidden;
+  padding: 0;
+  list-style: none;
+  width: 92%;
+  height: 100%;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  transition: all 300ms ease;
+	
+}
+.puNLSlides {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  float: left;
+  margin: 0;
+  padding: 1.6em;
+  list-style: none;
+  width: 16%;
+  height: inherit;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+.puNLSlides h1 {
+  position: absolute;
+  top: 0;
+  transform: rotate(-90deg);
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  padding: 0;
+  font-weight: 300;
+  margin: 6.5em 0 0;
+}
+
+/*.puNLSlides h1 {
+  position: relative;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  padding: 0;
+  font-weight: 300;
+  margin: 6.5rem 0 0;
+}*/
+.puNLSlides-overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+.puNLSlides p {
+  display: table;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 10%;
+  min-height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1em;
+  color: #333333;
+  font-size: 1em;
+  letter-spacing: .15em;
+}
+.puNLSlides p:before,
+.puNLSlides p:after {
+  content: "";
+  display: block;
+  height: 1px;
+}
+.puNLSlides.out {
+  width: 40%;
+}
+.puNLSlides.out p {
+  right: 0;
+}
+</style>
+
+</head>
+
+<body>
+ <div id="popUpNextLink">
+    	<div id="puNextLink-01" class="puNLBox">
+        	<div id="puNLClose"><a href="#popup" class="fa fa-times-circle" onClick=""></a></div>
+            <div id="puNLLogo"></div>
+            <div id="puNLSocialIcons">
+            	<div class="facebook"><a href="#pufacebook" id="pufacebook" class="fa fa-facebook-square" onClick=""></a></div>
+                <div class="twitter"><a href="#putwitter" id="putwitter"  class="fa fa-twitter-square" onClick=""></a></div>
+                <div class="gPlus "><a href="#pugplus" id="pugplus" class="fa fa-google-plus-square" onClick=""></a></div>
+                <div class="linkedin "><a href="#pulinkedin" id="pulinkedin" class="fa fa-linkedin-square" onClick=""></a></div>
+            </div>
+        </div>
+        <div id="puNextLink-02" class="puNLBox">
+            <div id="puNLSlide-01" class="out puNLSlides">
+            <div class="puNLSlides-overlay"></div>
+            	<h1>LOREM IPSUM</h1>
+                <span>lorem ipsum description</span>
+            	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. </p>
+                
+               
+            </div>
+            <div id="puNLSlide-02" class="puNLSlides">
+            	<h1>LOREM IPSUM</h1>
+                <div class="puNLSlides-overlay"></div>
+                 <span>lorem ipsum description</span>
+            	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. </p>
+            </div>
+            <div id="puNLSlide-03" class="puNLSlides">
+            	<h1>LOREM IPSUM</h1>
+                <div class="puNLSlides-overlay"></div>
+                 <span>lorem ipsum description</span>
+            	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. </p>
+            </div>
+            <div id="puNLSlide-04" class="puNLSlides">
+            	
+                <div class="puNLSlides-overlay"></div>
+                <span>lorem ipsum description</span>
+            	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. </p>
+            </div>
+         
+        </div>
+    </div>
+<script>
+
+(function () {
+    $(function () {
+        var $accordion, $wideScreen;
+        $accordion = $('#puNextLink-02').children('.puNLSlides');
+        $wideScreen = $(window).width() > 1;
+        if ($wideScreen) {
+            $accordion.on('click', function (e) {
+                var $this;
+                e.stopPropagation();
+                $this = $(this);
+				$this.children('h1').css({'transform':'rotate(0deg)'});
+                if ($this.hasClass('out')) {
+                    $this.addClass('out');
+                } else {
+                    $this.addClass('out');
+                    $this.siblings().removeClass('out');
+                }
+            });
+        } else {
+            $accordion.on('touchstart touchend', function (e) {
+                var $this;
+                e.stopPropagation();
+                $this = $(this);
+                if ($this.hasClass('out')) {
+                    $this.addClass('out');
+                } else {
+                    $this.addClass('out');
+                    $this.siblings().removeClass('out');
+                }
+            });
+        }
+    });
+
+}.call(this));
+
+</script>
+
+</body>
+</html>
